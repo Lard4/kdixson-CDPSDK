@@ -1,0 +1,5 @@
+"/Users/krdixson/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/krdixson/Desktop/CDPSDK
+Building Version: 1.0.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/krdixson/Desktop/CDPSDK/cmake-build-debug
