@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc ../lib/libCDPSDK.a  CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.o CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.o CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.o CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.o CMakeFiles/CDPSDK.dir/src/gps/minmea.c.o CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.o CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib ../lib/libCDPSDK.a
