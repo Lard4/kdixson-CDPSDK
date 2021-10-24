@@ -7,10 +7,20 @@
 #include "CDPInterface.h"
 #include "log.h"
 
+typedef struct {
+   float latitude;
+   float longitude;
+   int hours;
+   int minutes;
+   int seconds;
+   long timeMillis;
+} GPSReadings;
 
 class GPS {
 public:
    GPS(CDPInterface* intf, uint8_t maxNmeaSentences);
+
+   GPSReadings getAllReadings();
    float getLatitude();
    float getLongitude();
    int getHours();
@@ -25,6 +35,13 @@ private:
       struct minmea_sentence_gga gga;
       bool ggaValid;
    } GPSData;
+
+   float getLatitude(bool parse);
+   float getLongitude(bool parse);
+   int getHours(bool parse);
+   int getMinutes(bool parse);
+   int getSeconds(bool parse);
+   long getTimeMillis(bool parse);
 
    // function to parse the raw data Packet from the hardware
    void parse();

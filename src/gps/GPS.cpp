@@ -14,10 +14,67 @@ GPS::GPS(CDPInterface* intf, uint8_t maxNmeaSentences) {
 }
 
 /**
+ * Return a structure containing all of the data and only parse the raw one time.
+ */
+GPSReadings GPS::getAllReadings() {
+   this->parse();
+   return GPSReadings {
+         .latitude = this->getLatitude(false),
+         .longitude = this->getLongitude(false),
+         .hours = this->getHours(false),
+         .minutes = this->getMinutes(false),
+         .seconds = this->getSeconds(false),
+         .timeMillis = this->getTimeMillis(false),
+   };
+}
+
+/**
  * Return Decimal latitude or -1 if invalid/insufficient data
  */
 float GPS::getLatitude() {
-   this->parse();
+   return this->getLatitude(true);
+}
+
+/**
+ * Return Decimal longitude or -1 if invalid/insufficient data
+ */
+float GPS::getLongitude() {
+   return this->getLongitude(true);
+}
+
+/**
+ * Return UTC hours or -1 if invalid/insufficient data
+ */
+int GPS::getHours() {
+   return this->getHours(true);
+}
+
+/**
+ * Return UTC minutes or -1 if invalid/insufficient data
+ */
+int GPS::getMinutes() {
+   return this->getMinutes(true);
+}
+
+/**
+ * Return UTC seconds or -1 if invalid/insufficient data
+ */
+int GPS::getSeconds() {
+   return this->getSeconds(true);
+}
+
+/**
+ * Return current UTC epoch in milliseconds or -1 if invalid/insufficient data
+ */
+long GPS::getTimeMillis() {
+   return this->getTimeMillis(true);
+}
+
+/**
+ * Return Decimal latitude or -1 if invalid/insufficient data
+ */
+float GPS::getLatitude(bool parse) {
+   if (parse) this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -28,8 +85,8 @@ float GPS::getLatitude() {
 /**
  * Return Decimal longitude or -1 if invalid/insufficient data
  */
-float GPS::getLongitude() {
-   this->parse();
+float GPS::getLongitude(bool parse) {
+   if (parse) this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -40,8 +97,8 @@ float GPS::getLongitude() {
 /**
  * Return UTC hours or -1 if invalid/insufficient data
  */
-int GPS::getHours() {
-   this->parse();
+int GPS::getHours(bool parse) {
+   if (parse) this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -52,8 +109,8 @@ int GPS::getHours() {
 /**
  * Return UTC minutes or -1 if invalid/insufficient data
  */
-int GPS::getMinutes() {
-   this->parse();
+int GPS::getMinutes(bool parse) {
+   if (parse) this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -64,8 +121,8 @@ int GPS::getMinutes() {
 /**
  * Return UTC seconds or -1 if invalid/insufficient data
  */
-int GPS::getSeconds() {
-   this->parse();
+int GPS::getSeconds(bool parse) {
+   if (parse) this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -76,8 +133,8 @@ int GPS::getSeconds() {
 /**
  * Return current UTC epoch in milliseconds or -1 if invalid/insufficient data
  */
-long GPS::getTimeMillis() {
-   this->parse();
+long GPS::getTimeMillis(bool parse) {
+   if (parse) this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {

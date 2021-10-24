@@ -2,8 +2,7 @@
 #define CDPSDK_COMPUTER_H
 
 #include <vector>
-#include <thread>
-#include <iostream>
+#include <random>
 
 #include "CDPInterface.h"
 

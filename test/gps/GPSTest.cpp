@@ -61,3 +61,33 @@ TEST(GPSTest, ParseRMC) {
 
    // that's it!
 }
+
+TEST(GPSTest, GetAllReadings) {
+   auto intf = make_shared<MockInterface>();
+
+   EXPECT_CALL(*intf, setupGPS())
+         .Times(1);
+   EXPECT_CALL(*intf, acquireSemaphore())
+         .Times(1); // once because getAllReadings should only parse one time
+   EXPECT_CALL(*intf, releaseSemaphore())
+         .Times(1); // once because getAllReadings should only parse one time
+
+   GPS gpsInst = GPS(intf.get(), 1);
+
+   GPSReadings expectedReadings = {
+         .latitude = 38.924145,
+         .longitude = -94.766785,
+         .hours = 21,
+         .minutes = 2,
+         .seconds = 30,
+         .timeMillis = 797835750000,
+   };
+   GPSReadings actualReadings = gpsInst.getAllReadings();
+
+   EXPECT_FLOAT_EQ(actualReadings.latitude, expectedReadings.latitude);
+   EXPECT_FLOAT_EQ(actualReadings.longitude, expectedReadings.longitude);
+   EXPECT_EQ(actualReadings.timeMillis, expectedReadings.timeMillis);
+   EXPECT_EQ(actualReadings.seconds, expectedReadings.seconds);
+   EXPECT_EQ(actualReadings.minutes, expectedReadings.minutes);
+   EXPECT_EQ(actualReadings.hours, expectedReadings.hours);
+}
