@@ -34,6 +34,26 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/cmake_install.cmake")
+  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/boards/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/duck/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/crypto/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/util/cmake_install.cmake")
 endif()
 

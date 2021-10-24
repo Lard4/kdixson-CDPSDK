@@ -1,11 +1,11 @@
-#include <log.h>
+#include "CDPInterface.h"
 #include "GPS.h"
-#include "../../CDPInterface.h"
 
 #define INDENT_SPACES "  "
 
-GPS::GPS(uint8_t maxNmeaSentences) {
-   // TODO: setup UART
+GPS::GPS(CDPInterface* intf, uint8_t maxNmeaSentences) {
+   this->intf = intf;
+   this->intf->setupGPS();
    this->maxNmeaSentences = maxNmeaSentences;
    this->gpsData = {
          .rmcValid = false,
@@ -17,6 +17,7 @@ GPS::GPS(uint8_t maxNmeaSentences) {
  * Return Decimal latitude or -1 if invalid/insufficient data
  */
 float GPS::getLatitude() {
+   this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -28,6 +29,7 @@ float GPS::getLatitude() {
  * Return Decimal longitude or -1 if invalid/insufficient data
  */
 float GPS::getLongitude() {
+   this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -39,6 +41,7 @@ float GPS::getLongitude() {
  * Return UTC hours or -1 if invalid/insufficient data
  */
 int GPS::getHours() {
+   this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -50,6 +53,7 @@ int GPS::getHours() {
  * Return UTC minutes or -1 if invalid/insufficient data
  */
 int GPS::getMinutes() {
+   this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -61,6 +65,7 @@ int GPS::getMinutes() {
  * Return UTC seconds or -1 if invalid/insufficient data
  */
 int GPS::getSeconds() {
+   this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -72,6 +77,7 @@ int GPS::getSeconds() {
  * Return current UTC epoch in milliseconds or -1 if invalid/insufficient data
  */
 long GPS::getTimeMillis() {
+   this->parse();
    if (!gpsData.rmcValid) {
       return -1;
    } else {
@@ -87,14 +93,22 @@ long GPS::getTimeMillis() {
 /**
  * Parses rawData into a GPSData structure, so data are easily extracted by other public functions.
  *
- * @param rawData the raw input buffer from the GPS hardware.
+ * @param rawData the raw input buffer from the gps hardware.
  */
-void GPS::parse(char* rawData) {
-   char* sentence = rawData;
-   char* end = rawData;
+void GPS::parse() {
+   // acquire a semaphore so the data doesn't ever change under our feet while parsing.
+   this->intf->acquireSemaphore();
+
+   std::vector<uint8_t> rawData = this->intf->getGPSBuffer();
+   // make sure it's nul-terminated since we're about to work with char* strings.
+   rawData.push_back(0);
+
+   // convert from uint8_t to char
+   char* end = reinterpret_cast<char*>(rawData.data());
+   char* sentence;
    while (nullptr != (sentence = strsep(&end, "\r\n"))) {
       if (sentence[0] != '$') {
-         // strsep does funky splitting with multi-char delimeters this limits noise
+         // strsep does funky splitting with multi-char delimiters this limits noise
          continue;
       }
 
@@ -104,16 +118,12 @@ void GPS::parse(char* rawData) {
                gpsData.rmcValid = true;
                logdebug(
                    INDENT_SPACES
-                   "$xxRMC time:%d:%d:%d fixed-point coordinates, "
-                   "speed "
-                   "scaled to three decimal places: (%d,%d) %d\n",
+                   "$xxRMC time:%d:%d:%d fixed-point coordinates, speed scaled to three decimal places: (%d,%d) %d\n",
                    this->gps_data.rmc.time.hours,
                    this->gps_data.rmc.time.minutes,
                    this->gps_data.rmc.time.seconds,
-                   minmea_rescale(&(this->gps_data.rmc).latitude,
-                                   1000),
-                   minmea_rescale(&(this->gps_data.rmc).longitude,
-                                   1000),
+                   minmea_rescale(&(this->gps_data.rmc).latitude, 1000),
+                   minmea_rescale(&(this->gps_data.rmc).longitude, 1000),
                    minmea_rescale(&(this->gps_data.rmc).speed, 1000));
             } else {
                logwarn(INDENT_SPACES "$xxRMC sentence is not parsed\n");
@@ -135,11 +145,11 @@ void GPS::parse(char* rawData) {
          case MINMEA_SENTENCE_GSV:
          case MINMEA_SENTENCE_VTG:
          case MINMEA_SENTENCE_GLL:
-            // ignore
+            // ignore GSV, VTG, GLL
             break;
 
          case MINMEA_INVALID: {
-            loginfo(INDENT_SPACES "$xxxxx sentence is not valid (%02x%02x)\n", sentence[0], sentence[1]);
+            logwarn(INDENT_SPACES "$xxxxx sentence is not valid (%s)\n", sentence);
          } break;
 
          default: {
@@ -147,4 +157,7 @@ void GPS::parse(char* rawData) {
          } break;
       }
    }
+
+   // release the semaphore since we finished parsing.
+   this->intf->releaseSemaphore();
 }

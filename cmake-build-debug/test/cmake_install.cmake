@@ -34,6 +34,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/cmake_install.cmake")
+  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/cmake_install.cmake")
 endif()
 

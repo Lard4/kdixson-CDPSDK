@@ -20,10 +20,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/googletest-src/googletest/cmake/gtest.pc.in"
   "_deps/googletest-src/googletest/cmake/gtest_main.pc.in"
   "_deps/googletest-src/googletest/cmake/internal_utils.cmake"
+  "../include/CMakeLists.txt"
   "../src/CMakeLists.txt"
-  "../src/GPS/CMakeLists.txt"
+  "../src/boards/CMakeLists.txt"
+  "../src/crypto/CMakeLists.txt"
+  "../src/duck/CMakeLists.txt"
+  "../src/gps/CMakeLists.txt"
+  "../src/util/CMakeLists.txt"
   "../test/CMakeLists.txt"
-  "../test/GPS/CMakeLists.txt"
+  "../test/gps/CMakeLists.txt"
   "/Users/krdixson/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/Users/krdixson/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/Users/krdixson/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
@@ -77,14 +82,20 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/googletest-subbuild/CMakeLists.txt"
+  "_deps/cryptolib-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "include/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/GPS/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/boards/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/duck/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/gps/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/crypto/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/util/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "test/GPS/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/gps/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -94,6 +105,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "src/GPS/CMakeFiles/GPS.dir/DependInfo.cmake"
-  "test/GPS/CMakeFiles/GPSTest.dir/DependInfo.cmake"
+  "test/gps/CMakeFiles/GPSTest.dir/DependInfo.cmake"
   )

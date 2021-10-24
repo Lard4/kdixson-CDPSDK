@@ -907,24 +907,24 @@ int FuchsiaDeathTest::Wait() {
   bool process_terminated = false;
   bool socket_closed = false;
   do {
-    zx_port_packet_t packet = {};
-    status_zx = port.wait(zx::time::infinite(), &packet);
+    zx_port_packet_t Packet = {};
+    status_zx = port.wait(zx::time::infinite(), &Packet);
     GTEST_DEATH_TEST_CHECK_(status_zx == ZX_OK);
 
-    if (packet.key == kExceptionKey) {
+    if (Packet.key == kExceptionKey) {
       // Process encountered an exception. Kill it directly rather than
       // letting other handlers process the event. We will get a kProcessKey
       // event when the process actually terminates.
       status_zx = child_process_.kill();
       GTEST_DEATH_TEST_CHECK_(status_zx == ZX_OK);
-    } else if (packet.key == kProcessKey) {
+    } else if (Packet.key == kProcessKey) {
       // Process terminated.
-      GTEST_DEATH_TEST_CHECK_(ZX_PKT_IS_SIGNAL_ONE(packet.type));
-      GTEST_DEATH_TEST_CHECK_(packet.signal.observed & ZX_PROCESS_TERMINATED);
+      GTEST_DEATH_TEST_CHECK_(ZX_PKT_IS_SIGNAL_ONE(Packet.type));
+      GTEST_DEATH_TEST_CHECK_(Packet.signal.observed & ZX_PROCESS_TERMINATED);
       process_terminated = true;
-    } else if (packet.key == kSocketKey) {
-      GTEST_DEATH_TEST_CHECK_(ZX_PKT_IS_SIGNAL_ONE(packet.type));
-      if (packet.signal.observed & ZX_SOCKET_READABLE) {
+    } else if (Packet.key == kSocketKey) {
+      GTEST_DEATH_TEST_CHECK_(ZX_PKT_IS_SIGNAL_ONE(Packet.type));
+      if (Packet.signal.observed & ZX_SOCKET_READABLE) {
         // Read data from the socket.
         constexpr size_t kBufferSize = 1024;
         do {
@@ -945,7 +945,7 @@ int FuchsiaDeathTest::Wait() {
           GTEST_DEATH_TEST_CHECK_(status_zx == ZX_OK);
         }
       } else {
-        GTEST_DEATH_TEST_CHECK_(packet.signal.observed & ZX_SOCKET_PEER_CLOSED);
+        GTEST_DEATH_TEST_CHECK_(Packet.signal.observed & ZX_SOCKET_PEER_CLOSED);
         socket_closed = true;
       }
     }

@@ -77,49 +77,125 @@ include CMakeFiles/CDPSDK.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CDPSDK.dir/flags.make
 
-CMakeFiles/CDPSDK.dir/cdp.cpp.o: CMakeFiles/CDPSDK.dir/flags.make
-CMakeFiles/CDPSDK.dir/cdp.cpp.o: ../cdp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CDPSDK.dir/cdp.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CDPSDK.dir/cdp.cpp.o -c /Users/krdixson/Desktop/CDPSDK/cdp.cpp
+CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.o: CMakeFiles/CDPSDK.dir/flags.make
+CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.o: ../src/boards/BoardFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.o -c /Users/krdixson/Desktop/CDPSDK/src/boards/BoardFactory.cpp
 
-CMakeFiles/CDPSDK.dir/cdp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CDPSDK.dir/cdp.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/cdp.cpp > CMakeFiles/CDPSDK.dir/cdp.cpp.i
+CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/boards/BoardFactory.cpp > CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.i
 
-CMakeFiles/CDPSDK.dir/cdp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CDPSDK.dir/cdp.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/cdp.cpp -o CMakeFiles/CDPSDK.dir/cdp.cpp.s
+CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/boards/BoardFactory.cpp -o CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.s
 
-CMakeFiles/CDPSDK.dir/CDPInterface.cpp.o: CMakeFiles/CDPSDK.dir/flags.make
-CMakeFiles/CDPSDK.dir/CDPInterface.cpp.o: ../CDPInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CDPSDK.dir/CDPInterface.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CDPSDK.dir/CDPInterface.cpp.o -c /Users/krdixson/Desktop/CDPSDK/CDPInterface.cpp
+CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.o: CMakeFiles/CDPSDK.dir/flags.make
+CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.o: ../src/boards/Computer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.o -c /Users/krdixson/Desktop/CDPSDK/src/boards/Computer.cpp
 
-CMakeFiles/CDPSDK.dir/CDPInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CDPSDK.dir/CDPInterface.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/CDPInterface.cpp > CMakeFiles/CDPSDK.dir/CDPInterface.cpp.i
+CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/boards/Computer.cpp > CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.i
 
-CMakeFiles/CDPSDK.dir/CDPInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CDPSDK.dir/CDPInterface.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/CDPInterface.cpp -o CMakeFiles/CDPSDK.dir/CDPInterface.cpp.s
+CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/boards/Computer.cpp -o CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.s
+
+CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.o: CMakeFiles/CDPSDK.dir/flags.make
+CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.o: ../src/duck/Duck.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.o -c /Users/krdixson/Desktop/CDPSDK/src/duck/Duck.cpp
+
+CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/duck/Duck.cpp > CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.i
+
+CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/duck/Duck.cpp -o CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.s
+
+CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.o: CMakeFiles/CDPSDK.dir/flags.make
+CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.o: ../src/gps/GPS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.o -c /Users/krdixson/Desktop/CDPSDK/src/gps/GPS.cpp
+
+CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/gps/GPS.cpp > CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.i
+
+CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/gps/GPS.cpp -o CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.s
+
+CMakeFiles/CDPSDK.dir/src/gps/minmea.c.o: CMakeFiles/CDPSDK.dir/flags.make
+CMakeFiles/CDPSDK.dir/src/gps/minmea.c.o: ../src/gps/minmea.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/CDPSDK.dir/src/gps/minmea.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CDPSDK.dir/src/gps/minmea.c.o   -c /Users/krdixson/Desktop/CDPSDK/src/gps/minmea.c
+
+CMakeFiles/CDPSDK.dir/src/gps/minmea.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CDPSDK.dir/src/gps/minmea.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/gps/minmea.c > CMakeFiles/CDPSDK.dir/src/gps/minmea.c.i
+
+CMakeFiles/CDPSDK.dir/src/gps/minmea.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CDPSDK.dir/src/gps/minmea.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/gps/minmea.c -o CMakeFiles/CDPSDK.dir/src/gps/minmea.c.s
+
+CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.o: CMakeFiles/CDPSDK.dir/flags.make
+CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.o: ../src/crypto/duckcrypto.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.o -c /Users/krdixson/Desktop/CDPSDK/src/crypto/duckcrypto.cpp
+
+CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/crypto/duckcrypto.cpp > CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.i
+
+CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/crypto/duckcrypto.cpp -o CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.s
+
+CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.o: CMakeFiles/CDPSDK.dir/flags.make
+CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.o: ../src/util/Utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.o -c /Users/krdixson/Desktop/CDPSDK/src/util/Utils.cpp
+
+CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/util/Utils.cpp > CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.i
+
+CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/util/Utils.cpp -o CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.s
 
 # Object files for target CDPSDK
 CDPSDK_OBJECTS = \
-"CMakeFiles/CDPSDK.dir/cdp.cpp.o" \
-"CMakeFiles/CDPSDK.dir/CDPInterface.cpp.o"
+"CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.o" \
+"CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.o" \
+"CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.o" \
+"CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.o" \
+"CMakeFiles/CDPSDK.dir/src/gps/minmea.c.o" \
+"CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.o" \
+"CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.o"
 
 # External object files for target CDPSDK
 CDPSDK_EXTERNAL_OBJECTS =
 
-libCDPSDK.dylib: CMakeFiles/CDPSDK.dir/cdp.cpp.o
-libCDPSDK.dylib: CMakeFiles/CDPSDK.dir/CDPInterface.cpp.o
-libCDPSDK.dylib: CMakeFiles/CDPSDK.dir/build.make
-libCDPSDK.dylib: CMakeFiles/CDPSDK.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libCDPSDK.dylib"
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.o
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.o
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.o
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.o
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/src/gps/minmea.c.o
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.o
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.o
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/build.make
+../lib/libCDPSDK.a: CMakeFiles/CDPSDK.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library ../lib/libCDPSDK.a"
+	$(CMAKE_COMMAND) -P CMakeFiles/CDPSDK.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CDPSDK.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/CDPSDK.dir/build: libCDPSDK.dylib
+CMakeFiles/CDPSDK.dir/build: ../lib/libCDPSDK.a
 
 .PHONY : CMakeFiles/CDPSDK.dir/build
 

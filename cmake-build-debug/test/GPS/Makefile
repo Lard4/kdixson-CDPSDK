@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/CMakeFiles/progress.marks
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/GPS/all
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/CMakeFiles/progress.marks
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/gps/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/GPS/clean
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/gps/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,12 +163,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/GPS/preinstall
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/gps/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/GPS/preinstall
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/gps/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -177,18 +177,18 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/GPS/CMakeFiles/GPSTest.dir/rule:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/GPS/CMakeFiles/GPSTest.dir/rule
-.PHONY : test/GPS/CMakeFiles/GPSTest.dir/rule
+test/gps/CMakeFiles/GPSTest.dir/rule:
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/gps/CMakeFiles/GPSTest.dir/rule
+.PHONY : test/gps/CMakeFiles/GPSTest.dir/rule
 
 # Convenience name for target.
-GPSTest: test/GPS/CMakeFiles/GPSTest.dir/rule
+GPSTest: test/gps/CMakeFiles/GPSTest.dir/rule
 
 .PHONY : GPSTest
 
 # fast build rule for target.
 GPSTest/fast:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/GPS/CMakeFiles/GPSTest.dir/build.make test/GPS/CMakeFiles/GPSTest.dir/build
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/gps/CMakeFiles/GPSTest.dir/build.make test/gps/CMakeFiles/GPSTest.dir/build
 .PHONY : GPSTest/fast
 
 GPSTest.o: GPSTest.cpp.o
@@ -197,7 +197,7 @@ GPSTest.o: GPSTest.cpp.o
 
 # target to build an object file
 GPSTest.cpp.o:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/GPS/CMakeFiles/GPSTest.dir/build.make test/GPS/CMakeFiles/GPSTest.dir/GPSTest.cpp.o
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/gps/CMakeFiles/GPSTest.dir/build.make test/gps/CMakeFiles/GPSTest.dir/GPSTest.cpp.o
 .PHONY : GPSTest.cpp.o
 
 GPSTest.i: GPSTest.cpp.i
@@ -206,7 +206,7 @@ GPSTest.i: GPSTest.cpp.i
 
 # target to preprocess a source file
 GPSTest.cpp.i:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/GPS/CMakeFiles/GPSTest.dir/build.make test/GPS/CMakeFiles/GPSTest.dir/GPSTest.cpp.i
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/gps/CMakeFiles/GPSTest.dir/build.make test/gps/CMakeFiles/GPSTest.dir/GPSTest.cpp.i
 .PHONY : GPSTest.cpp.i
 
 GPSTest.s: GPSTest.cpp.s
@@ -215,7 +215,7 @@ GPSTest.s: GPSTest.cpp.s
 
 # target to generate assembly for a file
 GPSTest.cpp.s:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/GPS/CMakeFiles/GPSTest.dir/build.make test/GPS/CMakeFiles/GPSTest.dir/GPSTest.cpp.s
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/gps/CMakeFiles/GPSTest.dir/build.make test/gps/CMakeFiles/GPSTest.dir/GPSTest.cpp.s
 .PHONY : GPSTest.cpp.s
 
 # Help Target

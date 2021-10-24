@@ -1,5 +1,5 @@
-if(EXISTS "/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/GPSTest[1]_tests.cmake")
-  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/GPSTest[1]_tests.cmake")
+if(EXISTS "/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/GPSTest[1]_tests.cmake")
+  include("/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/GPSTest[1]_tests.cmake")
 else()
   add_test(GPSTest_NOT_BUILT GPSTest_NOT_BUILT)
 endif()

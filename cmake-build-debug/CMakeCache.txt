@@ -304,11 +304,25 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 FETCHCONTENT_QUIET:BOOL=ON
 
 //When not empty, overrides where to find pre-populated content
+// for cryptob
+FETCHCONTENT_SOURCE_DIR_CRYPTOB:PATH=
+
+//When not empty, overrides where to find pre-populated content
+// for cryptolib
+FETCHCONTENT_SOURCE_DIR_CRYPTOLIB:PATH=
+
+//When not empty, overrides where to find pre-populated content
 // for googletest
 FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
 
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of cryptob
+FETCHCONTENT_UPDATES_DISCONNECTED_CRYPTOB:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of cryptolib
+FETCHCONTENT_UPDATES_DISCONNECTED_CRYPTOLIB:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of googletest
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
@@ -505,7 +519,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

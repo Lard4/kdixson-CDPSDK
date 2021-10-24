@@ -75,6 +75,7 @@ CMAKE_BINARY_DIR = /Users/krdixson/Desktop/CDPSDK/cmake-build-debug
 # The main recursive "all" target.
 all: CMakeFiles/CDPSDK.dir/all
 all: _deps/googletest-build/all
+all: include/all
 all: src/all
 all: test/all
 
@@ -82,6 +83,7 @@ all: test/all
 
 # The main recursive "preinstall" target.
 preinstall: _deps/googletest-build/preinstall
+preinstall: include/preinstall
 preinstall: src/preinstall
 preinstall: test/preinstall
 
@@ -90,6 +92,7 @@ preinstall: test/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/CDPSDK.dir/clean
 clean: _deps/googletest-build/clean
+clean: include/clean
 clean: src/clean
 clean: test/clean
 
@@ -156,76 +159,178 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 .PHONY : _deps/googletest-build/googletest/clean
 
 #=============================================================================
+# Directory level rules for directory include
+
+# Recursive "all" directory target.
+include/all:
+
+.PHONY : include/all
+
+# Recursive "preinstall" directory target.
+include/preinstall:
+
+.PHONY : include/preinstall
+
+# Recursive "clean" directory target.
+include/clean:
+
+.PHONY : include/clean
+
+#=============================================================================
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
-src/all: src/GPS/all
+src/all: src/boards/all
+src/all: src/duck/all
+src/all: src/gps/all
+src/all: src/crypto/all
+src/all: src/util/all
 
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
-src/preinstall: src/GPS/preinstall
+src/preinstall: src/boards/preinstall
+src/preinstall: src/duck/preinstall
+src/preinstall: src/gps/preinstall
+src/preinstall: src/crypto/preinstall
+src/preinstall: src/util/preinstall
 
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
-src/clean: src/GPS/clean
+src/clean: src/boards/clean
+src/clean: src/duck/clean
+src/clean: src/gps/clean
+src/clean: src/crypto/clean
+src/clean: src/util/clean
 
 .PHONY : src/clean
 
 #=============================================================================
-# Directory level rules for directory src/GPS
+# Directory level rules for directory src/boards
 
 # Recursive "all" directory target.
-src/GPS/all: src/GPS/CMakeFiles/GPS.dir/all
+src/boards/all:
 
-.PHONY : src/GPS/all
+.PHONY : src/boards/all
 
 # Recursive "preinstall" directory target.
-src/GPS/preinstall:
+src/boards/preinstall:
 
-.PHONY : src/GPS/preinstall
+.PHONY : src/boards/preinstall
 
 # Recursive "clean" directory target.
-src/GPS/clean: src/GPS/CMakeFiles/GPS.dir/clean
+src/boards/clean:
 
-.PHONY : src/GPS/clean
+.PHONY : src/boards/clean
+
+#=============================================================================
+# Directory level rules for directory src/crypto
+
+# Recursive "all" directory target.
+src/crypto/all:
+
+.PHONY : src/crypto/all
+
+# Recursive "preinstall" directory target.
+src/crypto/preinstall:
+
+.PHONY : src/crypto/preinstall
+
+# Recursive "clean" directory target.
+src/crypto/clean:
+
+.PHONY : src/crypto/clean
+
+#=============================================================================
+# Directory level rules for directory src/duck
+
+# Recursive "all" directory target.
+src/duck/all:
+
+.PHONY : src/duck/all
+
+# Recursive "preinstall" directory target.
+src/duck/preinstall:
+
+.PHONY : src/duck/preinstall
+
+# Recursive "clean" directory target.
+src/duck/clean:
+
+.PHONY : src/duck/clean
+
+#=============================================================================
+# Directory level rules for directory src/gps
+
+# Recursive "all" directory target.
+src/gps/all:
+
+.PHONY : src/gps/all
+
+# Recursive "preinstall" directory target.
+src/gps/preinstall:
+
+.PHONY : src/gps/preinstall
+
+# Recursive "clean" directory target.
+src/gps/clean:
+
+.PHONY : src/gps/clean
+
+#=============================================================================
+# Directory level rules for directory src/util
+
+# Recursive "all" directory target.
+src/util/all:
+
+.PHONY : src/util/all
+
+# Recursive "preinstall" directory target.
+src/util/preinstall:
+
+.PHONY : src/util/preinstall
+
+# Recursive "clean" directory target.
+src/util/clean:
+
+.PHONY : src/util/clean
 
 #=============================================================================
 # Directory level rules for directory test
 
 # Recursive "all" directory target.
-test/all: test/GPS/all
+test/all: test/gps/all
 
 .PHONY : test/all
 
 # Recursive "preinstall" directory target.
-test/preinstall: test/GPS/preinstall
+test/preinstall: test/gps/preinstall
 
 .PHONY : test/preinstall
 
 # Recursive "clean" directory target.
-test/clean: test/GPS/clean
+test/clean: test/gps/clean
 
 .PHONY : test/clean
 
 #=============================================================================
-# Directory level rules for directory test/GPS
+# Directory level rules for directory test/gps
 
 # Recursive "all" directory target.
-test/GPS/all: test/GPS/CMakeFiles/GPSTest.dir/all
+test/gps/all: test/gps/CMakeFiles/GPSTest.dir/all
 
-.PHONY : test/GPS/all
+.PHONY : test/gps/all
 
 # Recursive "preinstall" directory target.
-test/GPS/preinstall:
+test/gps/preinstall:
 
-.PHONY : test/GPS/preinstall
+.PHONY : test/gps/preinstall
 
 # Recursive "clean" directory target.
-test/GPS/clean: test/GPS/CMakeFiles/GPSTest.dir/clean
+test/gps/clean: test/gps/CMakeFiles/GPSTest.dir/clean
 
-.PHONY : test/GPS/clean
+.PHONY : test/gps/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/CDPSDK.dir
@@ -234,12 +339,12 @@ test/GPS/clean: test/GPS/CMakeFiles/GPSTest.dir/clean
 CMakeFiles/CDPSDK.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target CDPSDK"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target CDPSDK"
 .PHONY : CMakeFiles/CDPSDK.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CDPSDK.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CDPSDK.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/CDPSDK.dir/rule
@@ -261,7 +366,7 @@ CMakeFiles/CDPSDK.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -285,11 +390,11 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -316,7 +421,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -343,7 +448,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -364,60 +469,34 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target src/GPS/CMakeFiles/GPS.dir
+# Target rules for target test/gps/CMakeFiles/GPSTest.dir
 
 # All Build rule for target.
-src/GPS/CMakeFiles/GPS.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target GPS"
-.PHONY : src/GPS/CMakeFiles/GPS.dir/all
+test/gps/CMakeFiles/GPSTest.dir/all: CMakeFiles/CDPSDK.dir/all
+test/gps/CMakeFiles/GPSTest.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+test/gps/CMakeFiles/GPSTest.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+test/gps/CMakeFiles/GPSTest.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f test/gps/CMakeFiles/GPSTest.dir/build.make test/gps/CMakeFiles/GPSTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/gps/CMakeFiles/GPSTest.dir/build.make test/gps/CMakeFiles/GPSTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target GPSTest"
+.PHONY : test/gps/CMakeFiles/GPSTest.dir/all
 
 # Build rule for subdir invocation for target.
-src/GPS/CMakeFiles/GPS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/GPS/CMakeFiles/GPS.dir/all
+test/gps/CMakeFiles/GPSTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 16
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/gps/CMakeFiles/GPSTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 0
-.PHONY : src/GPS/CMakeFiles/GPS.dir/rule
+.PHONY : test/gps/CMakeFiles/GPSTest.dir/rule
 
 # Convenience name for target.
-GPS: src/GPS/CMakeFiles/GPS.dir/rule
-
-.PHONY : GPS
-
-# clean rule for target.
-src/GPS/CMakeFiles/GPS.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/clean
-.PHONY : src/GPS/CMakeFiles/GPS.dir/clean
-
-#=============================================================================
-# Target rules for target test/GPS/CMakeFiles/GPSTest.dir
-
-# All Build rule for target.
-test/GPS/CMakeFiles/GPSTest.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-test/GPS/CMakeFiles/GPSTest.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
-test/GPS/CMakeFiles/GPSTest.dir/all: src/GPS/CMakeFiles/GPS.dir/all
-	$(MAKE) $(MAKESILENT) -f test/GPS/CMakeFiles/GPSTest.dir/build.make test/GPS/CMakeFiles/GPSTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f test/GPS/CMakeFiles/GPSTest.dir/build.make test/GPS/CMakeFiles/GPSTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target GPSTest"
-.PHONY : test/GPS/CMakeFiles/GPSTest.dir/all
-
-# Build rule for subdir invocation for target.
-test/GPS/CMakeFiles/GPSTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/GPS/CMakeFiles/GPSTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 0
-.PHONY : test/GPS/CMakeFiles/GPSTest.dir/rule
-
-# Convenience name for target.
-GPSTest: test/GPS/CMakeFiles/GPSTest.dir/rule
+GPSTest: test/gps/CMakeFiles/GPSTest.dir/rule
 
 .PHONY : GPSTest
 
 # clean rule for target.
-test/GPS/CMakeFiles/GPSTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f test/GPS/CMakeFiles/GPSTest.dir/build.make test/GPS/CMakeFiles/GPSTest.dir/clean
-.PHONY : test/GPS/CMakeFiles/GPSTest.dir/clean
+test/gps/CMakeFiles/GPSTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/gps/CMakeFiles/GPSTest.dir/build.make test/gps/CMakeFiles/GPSTest.dir/clean
+.PHONY : test/gps/CMakeFiles/GPSTest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

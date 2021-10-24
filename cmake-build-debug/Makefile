@@ -242,19 +242,6 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named GPS
-
-# Build rule for target.
-GPS: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GPS
-.PHONY : GPS
-
-# fast build rule for target.
-GPS/fast:
-	$(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/build
-.PHONY : GPS/fast
-
-#=============================================================================
 # Target rules for targets named GPSTest
 
 # Build rule for target.
@@ -264,62 +251,197 @@ GPSTest: cmake_check_build_system
 
 # fast build rule for target.
 GPSTest/fast:
-	$(MAKE) $(MAKESILENT) -f test/GPS/CMakeFiles/GPSTest.dir/build.make test/GPS/CMakeFiles/GPSTest.dir/build
+	$(MAKE) $(MAKESILENT) -f test/gps/CMakeFiles/GPSTest.dir/build.make test/gps/CMakeFiles/GPSTest.dir/build
 .PHONY : GPSTest/fast
 
-CDPInterface.o: CDPInterface.cpp.o
+src/boards/BoardFactory.o: src/boards/BoardFactory.cpp.o
 
-.PHONY : CDPInterface.o
-
-# target to build an object file
-CDPInterface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/CDPInterface.cpp.o
-.PHONY : CDPInterface.cpp.o
-
-CDPInterface.i: CDPInterface.cpp.i
-
-.PHONY : CDPInterface.i
-
-# target to preprocess a source file
-CDPInterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/CDPInterface.cpp.i
-.PHONY : CDPInterface.cpp.i
-
-CDPInterface.s: CDPInterface.cpp.s
-
-.PHONY : CDPInterface.s
-
-# target to generate assembly for a file
-CDPInterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/CDPInterface.cpp.s
-.PHONY : CDPInterface.cpp.s
-
-cdp.o: cdp.cpp.o
-
-.PHONY : cdp.o
+.PHONY : src/boards/BoardFactory.o
 
 # target to build an object file
-cdp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/cdp.cpp.o
-.PHONY : cdp.cpp.o
+src/boards/BoardFactory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.o
+.PHONY : src/boards/BoardFactory.cpp.o
 
-cdp.i: cdp.cpp.i
+src/boards/BoardFactory.i: src/boards/BoardFactory.cpp.i
 
-.PHONY : cdp.i
+.PHONY : src/boards/BoardFactory.i
 
 # target to preprocess a source file
-cdp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/cdp.cpp.i
-.PHONY : cdp.cpp.i
+src/boards/BoardFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.i
+.PHONY : src/boards/BoardFactory.cpp.i
 
-cdp.s: cdp.cpp.s
+src/boards/BoardFactory.s: src/boards/BoardFactory.cpp.s
 
-.PHONY : cdp.s
+.PHONY : src/boards/BoardFactory.s
 
 # target to generate assembly for a file
-cdp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/cdp.cpp.s
-.PHONY : cdp.cpp.s
+src/boards/BoardFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/boards/BoardFactory.cpp.s
+.PHONY : src/boards/BoardFactory.cpp.s
+
+src/boards/Computer.o: src/boards/Computer.cpp.o
+
+.PHONY : src/boards/Computer.o
+
+# target to build an object file
+src/boards/Computer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.o
+.PHONY : src/boards/Computer.cpp.o
+
+src/boards/Computer.i: src/boards/Computer.cpp.i
+
+.PHONY : src/boards/Computer.i
+
+# target to preprocess a source file
+src/boards/Computer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.i
+.PHONY : src/boards/Computer.cpp.i
+
+src/boards/Computer.s: src/boards/Computer.cpp.s
+
+.PHONY : src/boards/Computer.s
+
+# target to generate assembly for a file
+src/boards/Computer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/boards/Computer.cpp.s
+.PHONY : src/boards/Computer.cpp.s
+
+src/crypto/duckcrypto.o: src/crypto/duckcrypto.cpp.o
+
+.PHONY : src/crypto/duckcrypto.o
+
+# target to build an object file
+src/crypto/duckcrypto.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.o
+.PHONY : src/crypto/duckcrypto.cpp.o
+
+src/crypto/duckcrypto.i: src/crypto/duckcrypto.cpp.i
+
+.PHONY : src/crypto/duckcrypto.i
+
+# target to preprocess a source file
+src/crypto/duckcrypto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.i
+.PHONY : src/crypto/duckcrypto.cpp.i
+
+src/crypto/duckcrypto.s: src/crypto/duckcrypto.cpp.s
+
+.PHONY : src/crypto/duckcrypto.s
+
+# target to generate assembly for a file
+src/crypto/duckcrypto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/crypto/duckcrypto.cpp.s
+.PHONY : src/crypto/duckcrypto.cpp.s
+
+src/duck/Duck.o: src/duck/Duck.cpp.o
+
+.PHONY : src/duck/Duck.o
+
+# target to build an object file
+src/duck/Duck.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.o
+.PHONY : src/duck/Duck.cpp.o
+
+src/duck/Duck.i: src/duck/Duck.cpp.i
+
+.PHONY : src/duck/Duck.i
+
+# target to preprocess a source file
+src/duck/Duck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.i
+.PHONY : src/duck/Duck.cpp.i
+
+src/duck/Duck.s: src/duck/Duck.cpp.s
+
+.PHONY : src/duck/Duck.s
+
+# target to generate assembly for a file
+src/duck/Duck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/duck/Duck.cpp.s
+.PHONY : src/duck/Duck.cpp.s
+
+src/gps/GPS.o: src/gps/GPS.cpp.o
+
+.PHONY : src/gps/GPS.o
+
+# target to build an object file
+src/gps/GPS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.o
+.PHONY : src/gps/GPS.cpp.o
+
+src/gps/GPS.i: src/gps/GPS.cpp.i
+
+.PHONY : src/gps/GPS.i
+
+# target to preprocess a source file
+src/gps/GPS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.i
+.PHONY : src/gps/GPS.cpp.i
+
+src/gps/GPS.s: src/gps/GPS.cpp.s
+
+.PHONY : src/gps/GPS.s
+
+# target to generate assembly for a file
+src/gps/GPS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/gps/GPS.cpp.s
+.PHONY : src/gps/GPS.cpp.s
+
+src/gps/minmea.o: src/gps/minmea.c.o
+
+.PHONY : src/gps/minmea.o
+
+# target to build an object file
+src/gps/minmea.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/gps/minmea.c.o
+.PHONY : src/gps/minmea.c.o
+
+src/gps/minmea.i: src/gps/minmea.c.i
+
+.PHONY : src/gps/minmea.i
+
+# target to preprocess a source file
+src/gps/minmea.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/gps/minmea.c.i
+.PHONY : src/gps/minmea.c.i
+
+src/gps/minmea.s: src/gps/minmea.c.s
+
+.PHONY : src/gps/minmea.s
+
+# target to generate assembly for a file
+src/gps/minmea.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/gps/minmea.c.s
+.PHONY : src/gps/minmea.c.s
+
+src/util/Utils.o: src/util/Utils.cpp.o
+
+.PHONY : src/util/Utils.o
+
+# target to build an object file
+src/util/Utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.o
+.PHONY : src/util/Utils.cpp.o
+
+src/util/Utils.i: src/util/Utils.cpp.i
+
+.PHONY : src/util/Utils.i
+
+# target to preprocess a source file
+src/util/Utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.i
+.PHONY : src/util/Utils.cpp.i
+
+src/util/Utils.s: src/util/Utils.cpp.s
+
+.PHONY : src/util/Utils.s
+
+# target to generate assembly for a file
+src/util/Utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CDPSDK.dir/build.make CMakeFiles/CDPSDK.dir/src/util/Utils.cpp.s
+.PHONY : src/util/Utils.cpp.s
 
 # Help Target
 help:
@@ -334,18 +456,32 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... CDPSDK"
-	@echo "... GPS"
 	@echo "... GPSTest"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... CDPInterface.o"
-	@echo "... CDPInterface.i"
-	@echo "... CDPInterface.s"
-	@echo "... cdp.o"
-	@echo "... cdp.i"
-	@echo "... cdp.s"
+	@echo "... src/boards/BoardFactory.o"
+	@echo "... src/boards/BoardFactory.i"
+	@echo "... src/boards/BoardFactory.s"
+	@echo "... src/boards/Computer.o"
+	@echo "... src/boards/Computer.i"
+	@echo "... src/boards/Computer.s"
+	@echo "... src/crypto/duckcrypto.o"
+	@echo "... src/crypto/duckcrypto.i"
+	@echo "... src/crypto/duckcrypto.s"
+	@echo "... src/duck/Duck.o"
+	@echo "... src/duck/Duck.i"
+	@echo "... src/duck/Duck.s"
+	@echo "... src/gps/GPS.o"
+	@echo "... src/gps/GPS.i"
+	@echo "... src/gps/GPS.s"
+	@echo "... src/gps/minmea.o"
+	@echo "... src/gps/minmea.i"
+	@echo "... src/gps/minmea.s"
+	@echo "... src/util/Utils.o"
+	@echo "... src/util/Utils.i"
+	@echo "... src/util/Utils.s"
 .PHONY : help
 
 

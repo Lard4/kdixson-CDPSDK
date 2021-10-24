@@ -5,7 +5,7 @@
 		<Option title="gmock"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="clang"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\src\;CMake Files\src\GPS\;CMake Files\test\;CMake Files\test\GPS\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\include\;CMake Files\src\;CMake Files\src\boards\;CMake Files\src\duck\;CMake Files\src\gps\;CMake Files\src\crypto\;CMake Files\src\util\;CMake Files\test\;CMake Files\test\gps\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-build/googlemock"/>
@@ -252,17 +252,32 @@
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\"/>
 		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\"/>
+		</Unit>
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/GPS/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\src\GPS\"/>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/boards/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\boards\"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/duck/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\duck\"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/gps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\gps\"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/crypto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\crypto\"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\util\"/>
 		</Unit>
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/test/GPS/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\test\GPS\"/>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/test/gps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\gps\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

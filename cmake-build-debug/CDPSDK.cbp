@@ -5,7 +5,7 @@
 		<Option title="CDPSDK"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\src\;CMake Files\src\GPS\;CMake Files\test\;CMake Files\test\GPS\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\include\;CMake Files\src\;CMake Files\src\boards\;CMake Files\src\duck\;CMake Files\src\gps\;CMake Files\src\crypto\;CMake Files\src\util\;CMake Files\test\;CMake Files\test\gps\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug"/>
@@ -78,13 +78,14 @@
 				</MakeCommands>
 			</Target>
 			<Target title="CDPSDK">
-				<Option output="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/libCDPSDK.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option output="/Users/krdixson/Desktop/CDPSDK/lib/libCDPSDK.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="3"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/krdixson/Desktop/CDPSDK/include"/>
+					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/cryptolib-src"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
@@ -100,13 +101,14 @@
 				</MakeCommands>
 			</Target>
 			<Target title="CDPSDK/fast">
-				<Option output="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/libCDPSDK.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option output="/Users/krdixson/Desktop/CDPSDK/lib/libCDPSDK.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="3"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/krdixson/Desktop/CDPSDK/include"/>
+					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/cryptolib-src"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
@@ -313,62 +315,19 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="GPS">
-				<Option output="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/libGPS.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/krdixson/Desktop/CDPSDK/include"/>
-					<Add directory="/Users/krdixson/Desktop/CDPSDK/src/GPS/."/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/Makefile&quot;  VERBOSE=1 GPS"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="GPS/fast">
-				<Option output="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/libGPS.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/krdixson/Desktop/CDPSDK/include"/>
-					<Add directory="/Users/krdixson/Desktop/CDPSDK/src/GPS/."/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/Makefile&quot;  VERBOSE=1 GPS/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="GPSTest">
-				<Option output="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/GPSTest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS"/>
+				<Option output="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/GPSTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/krdixson/Desktop/CDPSDK/include"/>
+					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/cryptolib-src"/>
 					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest/include"/>
 					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest"/>
+					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googlemock/include"/>
+					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googlemock"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
@@ -377,22 +336,25 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/Makefile&quot;  VERBOSE=1 GPSTest"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/Makefile&quot;  VERBOSE=1 GPSTest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="GPSTest/fast">
-				<Option output="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/GPSTest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS"/>
+				<Option output="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/GPSTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/krdixson/Desktop/CDPSDK/include"/>
+					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/cryptolib-src"/>
 					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest/include"/>
 					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest"/>
+					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googlemock/include"/>
+					<Add directory="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googlemock"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
@@ -401,25 +363,13 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/Makefile&quot;  VERBOSE=1 GPSTest/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/GPS/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/Makefile&quot;  VERBOSE=1 GPSTest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/test/gps/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/CDPInterface.cpp">
-			<Option target="CDPSDK"/>
-		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/CDPInterface.h">
-			<Option target="CDPSDK"/>
-		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/cdp.cpp">
-			<Option target="CDPSDK"/>
-		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/cdp.h">
-			<Option target="CDPSDK"/>
-		</Unit>
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
@@ -432,19 +382,61 @@
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/GPS/GPS.cpp">
-			<Option target="GPS"/>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/CDPError.h">
+			<Option target="CDPSDK"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/GPS/GPS.h">
-			<Option target="GPS"/>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/CDPInterface.h">
+			<Option target="CDPSDK"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/GPS/minmea.c">
-			<Option target="GPS"/>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/CDPPacket.h">
+			<Option target="CDPSDK"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/GPS/minmea.h">
-			<Option target="GPS"/>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/Duck.h">
+			<Option target="CDPSDK"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/test/GPS/GPSTest.cpp">
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/GPS.h">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/log.h">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/minmea.h">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/boards/BoardFactory.cpp">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/boards/BoardFactory.h">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/boards/Computer.cpp">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/boards/Computer.h">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/crypto/duckcrypto.cpp">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/crypto/duckcrypto.h">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/duck/Duck.cpp">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/gps/GPS.cpp">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/gps/minmea.c">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/util/Utils.cpp">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/util/Utils.h">
+			<Option target="CDPSDK"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/test/gps/GPSTest.cpp">
 			<Option target="GPSTest"/>
 		</Unit>
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/CMakeLists.txt">
@@ -477,17 +469,32 @@
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\"/>
 		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/include/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\"/>
+		</Unit>
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/GPS/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\src\GPS\"/>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/boards/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\boards\"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/duck/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\duck\"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/gps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\gps\"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/crypto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\crypto\"/>
+		</Unit>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/src/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\util\"/>
 		</Unit>
 		<Unit filename="/Users/krdixson/Desktop/CDPSDK/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
-		<Unit filename="/Users/krdixson/Desktop/CDPSDK/test/GPS/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\test\GPS\"/>
+		<Unit filename="/Users/krdixson/Desktop/CDPSDK/test/gps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\gps\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

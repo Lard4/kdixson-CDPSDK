@@ -6,31 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/Users/krdixson/Desktop/CDPSDK/src/GPS/minmea.c
-minmea.h
-/Users/krdixson/Desktop/CDPSDK/src/GPS/minmea.h
-ctype.h
--
-stdarg.h
--
-stdlib.h
--
-string.h
--
-time.h
--
-
-/Users/krdixson/Desktop/CDPSDK/src/GPS/minmea.h
-errno.h
--
-math.h
--
-stdbool.h
--
-stdint.h
--
-stdio.h
--
-time.h
--
-

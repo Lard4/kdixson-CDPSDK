@@ -1,4 +1,4 @@
-# Install script for directory: /Users/krdixson/Desktop/CDPSDK/src/GPS
+# Install script for directory: /Users/krdixson/Desktop/CDPSDK/src/gps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

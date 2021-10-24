@@ -1,4 +1,4 @@
-# Install script for directory: /Users/krdixson/Desktop/CDPSDK/src/GPS/minmea
+# Install script for directory: /Users/krdixson/Desktop/CDPSDK/src/gps/minmea
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

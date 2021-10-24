@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/Ma
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/krdixson/Desktop/CDPSDK/include -isystem /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest 
+CXX_INCLUDES = -I/Users/krdixson/Desktop/CDPSDK/include -I/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/cryptolib-src -isystem /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googletest -isystem /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/_deps/googletest-src/googlemock 
 

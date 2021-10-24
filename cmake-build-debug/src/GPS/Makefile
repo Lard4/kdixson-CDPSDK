@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/CMakeFiles/progress.marks
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/GPS/all
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps/CMakeFiles/progress.marks
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/gps/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/GPS/clean
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/gps/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,87 +163,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/GPS/preinstall
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/gps/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/GPS/preinstall
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/gps/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
 	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-src/GPS/CMakeFiles/GPS.dir/rule:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/GPS/CMakeFiles/GPS.dir/rule
-.PHONY : src/GPS/CMakeFiles/GPS.dir/rule
-
-# Convenience name for target.
-GPS: src/GPS/CMakeFiles/GPS.dir/rule
-
-.PHONY : GPS
-
-# fast build rule for target.
-GPS/fast:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/build
-.PHONY : GPS/fast
-
-GPS.o: GPS.cpp.o
-
-.PHONY : GPS.o
-
-# target to build an object file
-GPS.cpp.o:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/GPS.cpp.o
-.PHONY : GPS.cpp.o
-
-GPS.i: GPS.cpp.i
-
-.PHONY : GPS.i
-
-# target to preprocess a source file
-GPS.cpp.i:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/GPS.cpp.i
-.PHONY : GPS.cpp.i
-
-GPS.s: GPS.cpp.s
-
-.PHONY : GPS.s
-
-# target to generate assembly for a file
-GPS.cpp.s:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/GPS.cpp.s
-.PHONY : GPS.cpp.s
-
-minmea.o: minmea.c.o
-
-.PHONY : minmea.o
-
-# target to build an object file
-minmea.c.o:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/minmea.c.o
-.PHONY : minmea.c.o
-
-minmea.i: minmea.c.i
-
-.PHONY : minmea.i
-
-# target to preprocess a source file
-minmea.c.i:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/minmea.c.i
-.PHONY : minmea.c.i
-
-minmea.s: minmea.c.s
-
-.PHONY : minmea.s
-
-# target to generate assembly for a file
-minmea.c.s:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/GPS/CMakeFiles/GPS.dir/build.make src/GPS/CMakeFiles/GPS.dir/minmea.c.s
-.PHONY : minmea.c.s
 
 # Help Target
 help:
@@ -257,13 +188,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... GPS"
-	@echo "... GPS.o"
-	@echo "... GPS.i"
-	@echo "... GPS.s"
-	@echo "... minmea.o"
-	@echo "... minmea.i"
-	@echo "... minmea.s"
 .PHONY : help
 
 

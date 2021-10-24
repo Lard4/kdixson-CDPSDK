@@ -69,39 +69,39 @@ CMAKE_SOURCE_DIR = /Users/krdixson/Desktop/CDPSDK
 CMAKE_BINARY_DIR = /Users/krdixson/Desktop/CDPSDK/cmake-build-debug
 
 # Include any dependencies generated for this target.
-include src/GPS/CMakeFiles/GPS.dir/depend.make
+include src/gps/CMakeFiles/GPS.dir/depend.make
 
 # Include the progress variables for this target.
-include src/GPS/CMakeFiles/GPS.dir/progress.make
+include src/gps/CMakeFiles/GPS.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include src/GPS/CMakeFiles/GPS.dir/flags.make
+include src/gps/CMakeFiles/GPS.dir/flags.make
 
-src/GPS/CMakeFiles/GPS.dir/GPS.cpp.o: src/GPS/CMakeFiles/GPS.dir/flags.make
-src/GPS/CMakeFiles/GPS.dir/GPS.cpp.o: ../src/GPS/GPS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/GPS/CMakeFiles/GPS.dir/GPS.cpp.o"
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPS.dir/GPS.cpp.o -c /Users/krdixson/Desktop/CDPSDK/src/GPS/GPS.cpp
+src/gps/CMakeFiles/GPS.dir/GPS.cpp.o: src/gps/CMakeFiles/GPS.dir/flags.make
+src/gps/CMakeFiles/GPS.dir/GPS.cpp.o: ../src/gps/GPS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/gps/CMakeFiles/GPS.dir/GPS.cpp.o"
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPS.dir/GPS.cpp.o -c /Users/krdixson/Desktop/CDPSDK/src/gps/GPS.cpp
 
-src/GPS/CMakeFiles/GPS.dir/GPS.cpp.i: cmake_force
+src/gps/CMakeFiles/GPS.dir/GPS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPS.dir/GPS.cpp.i"
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/GPS/GPS.cpp > CMakeFiles/GPS.dir/GPS.cpp.i
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/gps/GPS.cpp > CMakeFiles/GPS.dir/GPS.cpp.i
 
-src/GPS/CMakeFiles/GPS.dir/GPS.cpp.s: cmake_force
+src/gps/CMakeFiles/GPS.dir/GPS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPS.dir/GPS.cpp.s"
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/GPS/GPS.cpp -o CMakeFiles/GPS.dir/GPS.cpp.s
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/gps/GPS.cpp -o CMakeFiles/GPS.dir/GPS.cpp.s
 
-src/GPS/CMakeFiles/GPS.dir/minmea.c.o: src/GPS/CMakeFiles/GPS.dir/flags.make
-src/GPS/CMakeFiles/GPS.dir/minmea.c.o: ../src/GPS/minmea.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/GPS/CMakeFiles/GPS.dir/minmea.c.o"
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GPS.dir/minmea.c.o   -c /Users/krdixson/Desktop/CDPSDK/src/GPS/minmea.c
+src/gps/CMakeFiles/GPS.dir/minmea.c.o: src/gps/CMakeFiles/GPS.dir/flags.make
+src/gps/CMakeFiles/GPS.dir/minmea.c.o: ../src/gps/minmea.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/gps/CMakeFiles/GPS.dir/minmea.c.o"
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GPS.dir/minmea.c.o   -c /Users/krdixson/Desktop/CDPSDK/src/gps/minmea.c
 
-src/GPS/CMakeFiles/GPS.dir/minmea.c.i: cmake_force
+src/gps/CMakeFiles/GPS.dir/minmea.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GPS.dir/minmea.c.i"
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/GPS/minmea.c > CMakeFiles/GPS.dir/minmea.c.i
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/krdixson/Desktop/CDPSDK/src/gps/minmea.c > CMakeFiles/GPS.dir/minmea.c.i
 
-src/GPS/CMakeFiles/GPS.dir/minmea.c.s: cmake_force
+src/gps/CMakeFiles/GPS.dir/minmea.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GPS.dir/minmea.c.s"
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/GPS/minmea.c -o CMakeFiles/GPS.dir/minmea.c.s
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/krdixson/Desktop/CDPSDK/src/gps/minmea.c -o CMakeFiles/GPS.dir/minmea.c.s
 
 # Object files for target GPS
 GPS_OBJECTS = \
@@ -111,24 +111,24 @@ GPS_OBJECTS = \
 # External object files for target GPS
 GPS_EXTERNAL_OBJECTS =
 
-src/GPS/libGPS.a: src/GPS/CMakeFiles/GPS.dir/GPS.cpp.o
-src/GPS/libGPS.a: src/GPS/CMakeFiles/GPS.dir/minmea.c.o
-src/GPS/libGPS.a: src/GPS/CMakeFiles/GPS.dir/build.make
-src/GPS/libGPS.a: src/GPS/CMakeFiles/GPS.dir/link.txt
+src/gps/libGPS.a: src/gps/CMakeFiles/GPS.dir/GPS.cpp.o
+src/gps/libGPS.a: src/gps/CMakeFiles/GPS.dir/minmea.c.o
+src/gps/libGPS.a: src/gps/CMakeFiles/GPS.dir/build.make
+src/gps/libGPS.a: src/gps/CMakeFiles/GPS.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/krdixson/Desktop/CDPSDK/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libGPS.a"
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && $(CMAKE_COMMAND) -P CMakeFiles/GPS.dir/cmake_clean_target.cmake
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GPS.dir/link.txt --verbose=$(VERBOSE)
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && $(CMAKE_COMMAND) -P CMakeFiles/GPS.dir/cmake_clean_target.cmake
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GPS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-src/GPS/CMakeFiles/GPS.dir/build: src/GPS/libGPS.a
+src/gps/CMakeFiles/GPS.dir/build: src/gps/libGPS.a
 
-.PHONY : src/GPS/CMakeFiles/GPS.dir/build
+.PHONY : src/gps/CMakeFiles/GPS.dir/build
 
-src/GPS/CMakeFiles/GPS.dir/clean:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS && $(CMAKE_COMMAND) -P CMakeFiles/GPS.dir/cmake_clean.cmake
-.PHONY : src/GPS/CMakeFiles/GPS.dir/clean
+src/gps/CMakeFiles/GPS.dir/clean:
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps && $(CMAKE_COMMAND) -P CMakeFiles/GPS.dir/cmake_clean.cmake
+.PHONY : src/gps/CMakeFiles/GPS.dir/clean
 
-src/GPS/CMakeFiles/GPS.dir/depend:
-	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/krdixson/Desktop/CDPSDK /Users/krdixson/Desktop/CDPSDK/src/GPS /Users/krdixson/Desktop/CDPSDK/cmake-build-debug /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/GPS/CMakeFiles/GPS.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : src/GPS/CMakeFiles/GPS.dir/depend
+src/gps/CMakeFiles/GPS.dir/depend:
+	cd /Users/krdixson/Desktop/CDPSDK/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/krdixson/Desktop/CDPSDK /Users/krdixson/Desktop/CDPSDK/src/gps /Users/krdixson/Desktop/CDPSDK/cmake-build-debug /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps /Users/krdixson/Desktop/CDPSDK/cmake-build-debug/src/gps/CMakeFiles/GPS.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : src/gps/CMakeFiles/GPS.dir/depend
 
