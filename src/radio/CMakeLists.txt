@@ -3,14 +3,8 @@
 # refers to it via #include. This can make those headers easier to find during development and potentially aid things
 # like refactoring functionality, etc.
 set(FILES
-        Duck.cpp
-        Duck.h
-        MamaDuck.cpp
-        MamaDuck.h
-        DuckLink.cpp
-        DuckLink.h
-        DuckDetect.cpp
-        DuckDetect.h
+        Lora.cpp
+        Lora.h
 )
 
 target_sources(${PROJECT_NAME} PRIVATE ${FILES})

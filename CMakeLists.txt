@@ -45,6 +45,7 @@ FetchContent_MakeAvailable(cryptolib)
 # "" means we don't have any source files in this top-level directory.
 add_library(${PROJECT_NAME} STATIC "")
 
+# change the .a file output directory
 set_target_properties(${PROJECT_NAME} PROPERTIES
         ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib
 )

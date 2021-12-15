@@ -1,10 +1,13 @@
 #ifndef CDPSDK_UTILS_H
 #define CDPSDK_UTILS_H
 
+#include "CDPError.h"
+
 #include <string>
 #include <vector>
 
 #define UUID_MAX_LEN 8
+
 
 typedef uint8_t byte;
 

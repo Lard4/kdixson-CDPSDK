@@ -26,7 +26,6 @@ std::vector<uint8_t> Computer::getGPSBuffer() {
    return this->rawGPSData;
 }
 
-
 void Computer::setupLora() {
    cout << "successfully set up LoRa" << endl;
 }

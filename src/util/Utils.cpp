@@ -15,18 +15,19 @@ namespace duckutils {
    }
 
    bool getDetectState() { return detectState; }
+
    bool flipDetectState() {
       detectState = !detectState;
       return detectState;
 
    }
 
-   void getRandomBytes(int length, byte* bytes) {
+   void getRandomBytes(int length, byte *bytes) {
       //TODO: Random generator here isn't seeded properly
       std::default_random_engine generator;
       std::uniform_int_distribution<byte> distribution(0, UINT8_MAX);
 
-      const char* digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const char *digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
       for (int i = 0; i < length; i++) {
          bytes[i] = digits[distribution(generator)];
@@ -51,10 +52,10 @@ namespace duckutils {
       return msg;
    }
 
-   std::string convertToHex(const byte* data, int size) {
+   std::string convertToHex(const byte *data, int size) {
       std::string buf;
       buf.reserve(size * 2); // 2 digit hex
-      const char* cs = "0123456789ABCDEF";
+      const char *cs = "0123456789ABCDEF";
       for (int i = 0; i < size; i++) {
          byte val = data[i];
          buf += cs[(val >> 4) & 0x0F];
@@ -63,7 +64,7 @@ namespace duckutils {
       return buf;
    }
 
-   uint32_t toUnit32(const byte* data) {
+   uint32_t toUnit32(const byte *data) {
       uint32_t value = 0;
 
       value |= data[0] << 24;

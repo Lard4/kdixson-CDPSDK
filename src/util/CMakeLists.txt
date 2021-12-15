@@ -4,7 +4,6 @@
 # like refactoring functionality, etc.
 set(FILES
         Utils.cpp
-        Utils.h
 )
 
 target_sources(${PROJECT_NAME} PRIVATE ${FILES})

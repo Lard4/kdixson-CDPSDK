@@ -6,6 +6,8 @@ set(FILES
         GPS.h
         log.h
         minmea.h
+        DuckTypes.h
+        Utils.h
 )
 
 target_sources(${PROJECT_NAME} PRIVATE ${FILES})

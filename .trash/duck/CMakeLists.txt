@@ -3,8 +3,7 @@
 # refers to it via #include. This can make those headers easier to find during development and potentially aid things
 # like refactoring functionality, etc.
 set(FILES
-        Packet.cpp
-        Packet.h
+        Duck.cpp
 )
 
 target_sources(${PROJECT_NAME} PRIVATE ${FILES})

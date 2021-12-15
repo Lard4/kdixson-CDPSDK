@@ -2,6 +2,7 @@
 #define CDPSDK_CDPPACKET_H
 
 #include "log.h"
+#include "Utils.h"
 #include <string>
 #include <vector>
 
@@ -181,7 +182,8 @@ public:
       std::vector<byte>().swap(muid);
       std::vector<byte>().swap(path);
       std::vector<byte>().swap(data);
-      duckType = DuckType::UNKNOWN;
+      //TODO: make this work
+      // duckType = DuckType::UNKNOWN;
       hopCount = 0;
       topic = 0;
       path_offset = 0;

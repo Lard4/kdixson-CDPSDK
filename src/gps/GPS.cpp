@@ -5,7 +5,7 @@
 
 GPS::GPS(CDPInterface* intf, uint8_t maxNmeaSentences) {
    this->intf = intf;
-   this->intf->setupGPS();
+   this->intf->gps->setup();
    this->maxNmeaSentences = maxNmeaSentences;
    this->gpsData = {
          .rmcValid = false,
@@ -139,6 +139,7 @@ long GPS::getTimeMillis(bool parse) {
       return -1;
    } else {
       struct timespec time = {};
+      clock_gettime(CLOCK_REALTIME, &time);
       if (-1 == minmea_gettime(&time, &(gpsData.rmc.date),&(gpsData.rmc.time))) {
          return -1;
       } else {
@@ -156,7 +157,7 @@ void GPS::parse() {
    // acquire a semaphore so the data doesn't ever change under our feet while parsing.
    this->intf->acquireSemaphore();
 
-   std::vector<uint8_t> rawData = this->intf->getGPSBuffer();
+   std::vector<uint8_t> rawData = this->intf->gps->getBuffer();
    // make sure it's nul-terminated since we're about to work with char* strings.
    rawData.push_back(0);
 
