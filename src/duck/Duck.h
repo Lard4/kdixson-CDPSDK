@@ -14,7 +14,7 @@ enum muidStatus {
 
 #include "../message/BloomFilter.h"
 #include "../message/Packet.h"
-#include "../radio/Lora.h"
+#include "../radio/Radio.h"
 #include "DuckTypes.h"
 #include "Utils.h"
 
@@ -207,7 +207,7 @@ protected:
 
    CDPInterface* intf;
 
-   Lora duckRadio;
+   Radio duckRadio;
 
    Packet* txPacket = NULL;
    Packet* rxPacket = NULL;

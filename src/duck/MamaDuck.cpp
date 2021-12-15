@@ -23,7 +23,7 @@ int MamaDuck::setupWithDefaults(std::vector<byte> deviceId, std::string ssid, st
 void MamaDuck::run() {
    duckRadio.serviceInterruptFlags();
 
-   if (Lora::getReceiveFlag()) {
+   if (Radio::getReceiveFlag()) {
       handleReceivedPacket();
       rxPacket->reset();
    }

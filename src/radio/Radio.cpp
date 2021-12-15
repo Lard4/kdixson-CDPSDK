@@ -1,16 +1,16 @@
 #include <zlib.h>
-#include "Lora.h"
+#include "Radio.h"
 #include "Utils.h"
 
 
-volatile uint16_t Lora::interruptFlags = 0;
-volatile bool Lora::receivedFlag = false;
+volatile uint16_t Radio::interruptFlags = 0;
+volatile bool Radio::receivedFlag = false;
 
-Lora::Lora(CDPInterface* intf) {
+Radio::Radio(CDPInterface* intf) {
    this->intf = intf;
 }
 
-int Lora::setupRadio(LoraConfigParams config) {
+int Radio::setupRadio(LoraConfigParams config) {
    int rc = intf->lora->setup();
 
    if (rc != ERR_NONE) {
@@ -18,7 +18,7 @@ int Lora::setupRadio(LoraConfigParams config) {
       return LORA_ERR_BEGIN;
    }
 
-   // Lora is started, we need to set all the radio parameters, before it can
+   // Radio is started, we need to set all the radio parameters, before it can
    // start receiving packets
    rc = intf->lora->setFrequency(config.band);
    if (rc == LORA_ERR_INVALID_FREQUENCY) {
@@ -69,7 +69,7 @@ int Lora::setupRadio(LoraConfigParams config) {
    return ERR_NONE;
 }
 
-void Lora::setSyncWord(byte syncWord) {
+void Radio::setSyncWord(byte syncWord) {
    int error = intf->lora->setSyncWord(syncWord);
    if (error != ERR_NONE) {
       logerror("sync word is invalid");
@@ -77,7 +77,7 @@ void Lora::setSyncWord(byte syncWord) {
    intf->lora->startReceive();
 }
 
-int Lora::readReceivedData(std::vector<byte>* packetBytes) {
+int Radio::readReceivedData(std::vector<byte>* packetBytes) {
 
    int packet_length = 0;
    int err = ERR_NONE;
@@ -95,7 +95,7 @@ int Lora::readReceivedData(std::vector<byte>* packetBytes) {
    err = intf->lora->readData(packetBytes->data(), packet_length);
    loginfo("readReceivedData() - intf->lora->readData returns: %d", err);
 
-   Lora::setReceiveFlag(false);
+   Radio::setReceiveFlag(false);
    int rxState = startReceive();
 
    if (err != ERR_NONE) {
@@ -139,20 +139,20 @@ int Lora::readReceivedData(std::vector<byte>* packetBytes) {
    return err;
 }
 
-int Lora::sendData(byte* data, int length) {
+int Radio::sendData(byte* data, int length) {
    return startTransmitData(data, length);
 }
 
-int Lora::relayPacket(Packet* packet) {
+int Radio::relayPacket(Packet* packet) {
    return startTransmitData(packet->getBuffer().data(),
                             packet->getBuffer().size());
 }
 
-int Lora::sendData(std::vector<byte> data) {
+int Radio::sendData(std::vector<byte> data) {
    return startTransmitData(data.data(), data.size());
 }
 
-int Lora::startReceive() {
+int Radio::startReceive() {
    int state = intf->lora->startReceive();
 
    if (state != ERR_NONE) {
@@ -163,18 +163,18 @@ int Lora::startReceive() {
    return ERR_NONE;
 }
 
-int Lora::getRSSI() { return intf->lora->getRSSI(); }
+int Radio::getRSSI() { return intf->lora->getRSSI(); }
 
 // TODO: implement this
-int Lora::ping() { return ERR_NOT_SUPPORTED; }
+int Radio::ping() { return ERR_NOT_SUPPORTED; }
 
-int Lora::standBy() { return intf->lora->standby(); }
+int Radio::standBy() { return intf->lora->standby(); }
 
-int Lora::sleep() { return intf->lora->sleep(); }
+int Radio::sleep() { return intf->lora->sleep(); }
 
-void Lora::processRadioIrq() {}
+void Radio::processRadioIrq() {}
 
-void Lora::setChannel(int channelNum) {
+void Radio::setChannel(int channelNum) {
    logdebug("Setting Channel to: %d", channelNum);
 
    int err;
@@ -214,49 +214,49 @@ void Lora::setChannel(int channelNum) {
    }
 }
 
-void Lora::serviceInterruptFlags() {
-   if (Lora::interruptFlags != 0) {
+void Radio::serviceInterruptFlags() {
+   if (Radio::interruptFlags != 0) {
       /* TODO: set these constants
 
-      if (Lora::interruptFlags & SX127X_CLEAR_IRQ_FLAG_RX_TIMEOUT) {
+      if (Radio::interruptFlags & SX127X_CLEAR_IRQ_FLAG_RX_TIMEOUT) {
          loginfo("Interrupt flag was set: timeout");
       }
-      if (Lora::interruptFlags & SX127X_CLEAR_IRQ_FLAG_RX_DONE) {
+      if (Radio::interruptFlags & SX127X_CLEAR_IRQ_FLAG_RX_DONE) {
          loginfo("Interrupt flag was set: packet reception complete");
-         Lora::setReceiveFlag(true);
+         Radio::setReceiveFlag(true);
       }
-      if (Lora::interruptFlags & SX127X_CLEAR_IRQ_FLAG_PAYLOAD_CRC_ERROR) {
+      if (Radio::interruptFlags & SX127X_CLEAR_IRQ_FLAG_PAYLOAD_CRC_ERROR) {
          loginfo("Interrupt flag was set: payload CRC error");
       }
-      if (Lora::interruptFlags & SX127X_CLEAR_IRQ_FLAG_VALID_HEADER) {
+      if (Radio::interruptFlags & SX127X_CLEAR_IRQ_FLAG_VALID_HEADER) {
          loginfo("Interrupt flag was set: valid header received");
       }
-      if (Lora::interruptFlags & SX127X_CLEAR_IRQ_FLAG_TX_DONE) {
+      if (Radio::interruptFlags & SX127X_CLEAR_IRQ_FLAG_TX_DONE) {
          loginfo("Interrupt flag was set: payload transmission complete");
          startReceive();
       }
-      if (Lora::interruptFlags & SX127X_CLEAR_IRQ_FLAG_CAD_DONE) {
+      if (Radio::interruptFlags & SX127X_CLEAR_IRQ_FLAG_CAD_DONE) {
          loginfo("Interrupt flag was set: CAD complete");
       }
-      if (Lora::interruptFlags & SX127X_CLEAR_IRQ_FLAG_FHSS_CHANGE_CHANNEL) {
+      if (Radio::interruptFlags & SX127X_CLEAR_IRQ_FLAG_FHSS_CHANGE_CHANNEL) {
          loginfo("Interrupt flag was set: FHSS change channel");
       }
-      if (Lora::interruptFlags & SX127X_CLEAR_IRQ_FLAG_CAD_DETECTED) {
+      if (Radio::interruptFlags & SX127X_CLEAR_IRQ_FLAG_CAD_DETECTED) {
          loginfo("Interrupt flag was set: valid LoRa signal detected during CAD operation");
       }
        */
 
-      Lora::interruptFlags = 0;
+      Radio::interruptFlags = 0;
    }
 }
 
 // IMPORTANT: this function MUST be 'void' type and MUST NOT have any arguments!
-void Lora::onInterrupt(void) {
+void Radio::onInterrupt(void) {
    //TODO: fix this
    // interruptFlags = intf->lora->getIRQFlags();
 }
 
-int Lora::startTransmitData(byte* data, int length) {
+int Radio::startTransmitData(byte* data, int length) {
    int err = ERR_NONE;
    int tx_err = ERR_NONE;
    loginfo("TX data");

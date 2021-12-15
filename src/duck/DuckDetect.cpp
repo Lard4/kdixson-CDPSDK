@@ -52,7 +52,7 @@ void DuckDetect::run() {
 
    duckRadio.serviceInterruptFlags();
 
-   if (Lora::getReceiveFlag()) {
+   if (Radio::getReceiveFlag()) {
       handleReceivedPacket();
    }
 }

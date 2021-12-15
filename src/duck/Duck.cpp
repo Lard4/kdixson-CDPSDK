@@ -91,7 +91,7 @@ int Duck::setupRadio(float band, int ss, int rst, int di0, int di1,
    config.bw = bw;
    config.sf = sf;
    config.gain = gain;
-   config.func = Lora::onInterrupt;
+   config.func = Radio::onInterrupt;
 
    int err = duckRadio.setupRadio(config);
 
@@ -100,7 +100,7 @@ int Duck::setupRadio(float band, int ss, int rst, int di0, int di1,
       return err;
    }
    if (err == LORA_ERR_SETUP) {
-      logerror("ERROR setupRadio. Failed to setup Lora. rc = %d", err);
+      logerror("ERROR setupRadio. Failed to setup Radio. rc = %d", err);
       return err;
    }
    if (err == LORA_ERR_RECEIVE) {
@@ -238,7 +238,7 @@ int Duck::sendPong() {
    }
    err = duckRadio.sendData(txPacket->getBuffer());
    if (err != ERR_NONE) {
-      logerror("ERROR Oops! Lora sendData failed, err = %d", err);
+      logerror("ERROR Oops! Radio sendData failed, err = %d", err);
       return err;
    }
    return err;
@@ -254,7 +254,7 @@ int Duck::sendPing() {
    }
    err = duckRadio.sendData(txPacket->getBuffer());
    if (err != ERR_NONE) {
-      logerror("ERROR Lora sendData failed, err = %d", err);
+      logerror("ERROR Radio sendData failed, err = %d", err);
    }
    return err;
 }
@@ -274,17 +274,17 @@ std::string Duck::getErrorString(int error) {
       case ERR_OTA:
          return errorStr + "OTA update failure";
       case LORA_ERR_BEGIN:
-         return errorStr + "Lora module initialization failed";
+         return errorStr + "Radio module initialization failed";
       case LORA_ERR_SETUP:
-         return errorStr + "Lora module configuration failed";
+         return errorStr + "Radio module configuration failed";
       case LORA_ERR_RECEIVE:
-         return errorStr + "Lora module failed to read data";
+         return errorStr + "Radio module failed to read data";
       case LORA_ERR_TIMEOUT:
-         return errorStr + "Lora module timed out";
+         return errorStr + "Radio module timed out";
       case LORA_ERR_TRANSMIT:
-         return errorStr + "Lora moduled failed to send data";
+         return errorStr + "Radio moduled failed to send data";
       case LORA_ERR_HANDLE_PACKET:
-         return errorStr + "Lora moduled failed to handle RX data";
+         return errorStr + "Radio moduled failed to handle RX data";
       case LORA_ERR_MSG_TOO_LARGE:
          return errorStr + "Attempted to send a message larger than 256 bytes";
 

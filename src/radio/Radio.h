@@ -1,5 +1,5 @@
-#ifndef CDPSDK_LORA_H
-#define CDPSDK_LORA_H
+#ifndef CDPSDK_RADIO_H
+#define CDPSDK_RADIO_H
 
 #include <CDPInterface.h>
 #include "log.h"
@@ -47,7 +47,7 @@ typedef struct {
  * components of the CDP implementation.
  *
  */
-class Lora {
+class Radio {
    friend class Duck;
    friend class DuckDetect;
    friend class DuckLink;
@@ -61,7 +61,7 @@ private:
    // Duck does things like recording the outgoing MUIDs so that it can wait for
    // acknowledgments to those MUIDs.
 
-   Lora(CDPInterface* intf);
+   Radio(CDPInterface* intf);
 
    /**
     * @brief Initialize the LoRa chip.
@@ -181,12 +181,12 @@ private:
    static void setReceiveFlag(bool value) { receivedFlag = value; }
    static bool getReceiveFlag() { return receivedFlag; }
 
-   Lora(Lora const&) = delete;
-   Lora& operator=(Lora const&) = delete;
+   Radio(Radio const&) = delete;
+   Radio& operator=(Radio const&) = delete;
 
    int err;
    int channel;
    CDPInterface* intf;
 };
 
-#endif //CDPSDK_LORA_H
+#endif //CDPSDK_RADIO_H

@@ -12,17 +12,17 @@
 #define ERR_ID_TOO_LONG   -5101
 #define ERR_OTA           -5200
 
-/// Lora module initialization error
+/// Radio module initialization error
 #define LORA_ERR_BEGIN          -1000
-/// Lora module configuration error
+/// Radio module configuration error
 #define LORA_ERR_SETUP          -1001
-/// Failure to read data from the Lora module
+/// Failure to read data from the Radio module
 #define LORA_ERR_RECEIVE        -1002
-/// Lora module timeout error
+/// Radio module timeout error
 #define LORA_ERR_TIMEOUT        -1003
 // Failed to send data
 #define LORA_ERR_TRANSMIT       -1004
-// Failed to handle data received from the Lora module
+// Failed to handle data received from the Radio module
 #define LORA_ERR_HANDLE_PACKET  -1050
 // Attempted to send a message larger than 256 bytes
 #define LORA_ERR_MSG_TOO_LARGE  -1051
