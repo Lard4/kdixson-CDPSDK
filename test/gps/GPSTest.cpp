@@ -50,7 +50,7 @@ TEST(GPSTest, ParseRMC) {
    // test the getters in our gps instance
    EXPECT_FLOAT_EQ(gpsInst.getLatitude(), 38.924145);
    EXPECT_FLOAT_EQ(gpsInst.getLongitude(), -94.766785);
-   EXPECT_EQ(gpsInst.getTimeMillis(), 797806950000);
+   EXPECT_EQ(gpsInst.getTimeMillis(), 797835750000);
    EXPECT_EQ(gpsInst.getSeconds(), 30);
    EXPECT_EQ(gpsInst.getMinutes(), 2);
    EXPECT_EQ(gpsInst.getHours(), 21);
@@ -78,7 +78,7 @@ TEST(GPSTest, GetAllReadings) {
          .hours = 21,
          .minutes = 2,
          .seconds = 30,
-         .timeMillis = 797806950000,
+         .timeMillis = 797835750000,
    };
    GPSReadings actualReadings = gpsInst.getAllReadings();
 
